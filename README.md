@@ -50,6 +50,7 @@ order peers:
 - Ledger - L
 - Smart Contract - S
 
+![network diagram](networkdiagram1.png)
 - The network N, accessed by a set of users defined by a Certificate Authority CA4, who have a set of rights over the resources in the network N as described by policies contained inside a network configuration NC4. All of this is made real when we configure and start the ordering service node O4.
 
 - Think of smart contracts as governing transactions, whereas chaincode governs how smart contracts are packaged for deployment.
