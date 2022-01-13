@@ -4,7 +4,7 @@ The hyper ledger is a project in which you have diff frameworks and tools avalib
 one of this is hyperledger fabric
 
 
-### About Public Blockchain:
+## About Public Blockchain:
 - `bitcoin blockchain:` It only store trasactions / data .This network cannot be used to do programming. 
 
 - Change the existing internet to new internet which is the decetralised internet. To achive that we have to write softwares which run on this decentralised internet. These softwares are called Dapps.
@@ -16,7 +16,9 @@ one of this is hyperledger fabric
   - proof of work and proof of stake
 
 
-### About Private Network: 
+## About Private Network: 
+
+![pvt blockchain channel](Screenshot-pvtblock-1.png)
 - Private Blockchain Networks are `private and permissioned`. create a subnet for business to keep their transactions private.
 - The HyperLedger is a project open source project by Liux foudation. The HyperLedger fabric is one of that project.   
 - Fabric is a pvt blockchain network and it have the subnets features and we call them as `channels`.
