@@ -78,7 +78,7 @@ order peers:
 
 ## Fabric 1.0:
 
-FILE LOCATION: [fabric-samples/firstt-network/]
+FILE LOCATION: `[fabric-samples/firstt-network/]`
 
 ```
   > ./byfn.sh
