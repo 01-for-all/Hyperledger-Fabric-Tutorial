@@ -55,3 +55,95 @@ order peers:
 
 - Think of smart contracts as governing transactions, whereas chaincode governs how smart contracts are packaged for deployment.
 
+
+### Prerequisites:
+
+> sudo apt-get install git
+
+- cURL
+  > sudo apt-get install curl
+- install docker
+  > sudo apt-get -y install docker-compose
+- Make sure the Docker daemon is running.
+  > sudo systemctl start docker
+- install go
+- install JQ (only required if you will be writing Go chaincode or SDK applications).
+
+### Download the latest release of Fabric samples, docker images, and binaries:
+
+> curl -sSL https://bit.ly/2ysbOFE | bash -s [version-no]
+
+## Fabric 1.0:
+
+[fabric-samples/firstt-network/]
+
+> ./byfn.sh
+> ./byfn.sh generate
+> ./byfn.sh up
+> ./byfn.sh down  
+> ./byfn.sh up -l java
+> docker rm -f $(docker ps -aq)
+> docker rmi -f $(docker images | grep fabcar | awk '{print $3}')
+
+## Fabric 2.0 :
+
+Using the Fabric test network:
+
+> ./network.sh down
+> ./network.sh up
+> docker ps -a
+> ./network.sh createChannel -c [channel-name]
+
+### Basic Network 2.0:
+
+https://github.com/adhavpavan/BasicNetwork-2.0.git
+
+#### Network Details:
+
+- Two Organizations
+- Two peers in each Orgaisation
+- One CA for each Organisation
+- 5 Orderer(RAFT)
+- State Database: Couch DB
+  - why use Couch DB over level DB ? It enables to run complex queries.
+
+#### Folder Structure:
+
+- It is created by taking ref from first network and test network of their official documentation.
+- app folder: this is used when we write our API's
+- Artifacts folder: one of the most imp folder in fabric network.
+  - `channel`
+    - configtx.yaml
+    - crypto-config.yaml
+    - `config`
+      - core.yaml
+  - `src`: will have our smart contracts that is the chaincode. fabic 2.0 have introduced a contract api for writing the chain code which support multiple smart contacts within a single chain
+  - base.yml: this is the common part for starting the peer.
+  - `docker-compose.yaml`: will have all the services we require for creating our network.
+  - network-config.yaml:diff files which will require for writing the APIs in node
+  - org1.yaml: this the connection profile file which will be required for writing the api's
+  - `chanel.artifacts`
+  - app.js : This is to create a server to interact with the network
+  - cleanup.sh:to clean the network
+  - `crypto-config` : here we will have all the identities certificate,public , private keys of all the organisations
+    - org 1: structure will be common for all our identities.
+      - ca
+        - ca certificate and pvt key
+      - msp
+        - admincerts
+        - cacerts
+        - tlccacerts
+      - peers: we can have multiple peers in network of org
+        - each peers will have msp and tls.
+        - `msp`
+          - keystore : were the pvt key gets stored
+          - signcerts:this is the certificate of this peer.
+      - tlsca(trasport layer security)
+      - users
+  - config.js and config.json is used to write APIs.
+  - depoloyChaincode.sh
+
+#### crypto-config.yaml : Create Idetities
+
+#### configtx.yaml : create channel artifacts
+
