@@ -61,14 +61,14 @@ order peers:
 ## Prerequisites:
 
 - Git:
-`> sudo apt-get install git`
+`sudo apt-get install git`
 
 - cURL:
-  `> sudo apt-get install curl`
+  `sudo apt-get install curl`
 - Install docker:
-  `> sudo apt-get -y install docker-compose`
+  `sudo apt-get -y install docker-compose`
 - Make sure the Docker daemon is running:
-  `> sudo systemctl start docker`
+  `sudo systemctl start docker`
 - Install go
 - Install JQ (only required if you will be writing Go chaincode or SDK applications).
 
