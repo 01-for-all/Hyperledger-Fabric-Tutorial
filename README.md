@@ -53,9 +53,25 @@ order peers:
 
 ![network diagram](networkdiagram1.png)
 
-- The network N, accessed by a set of users defined by a Certificate Authority CA4, who have a set of rights over the resources in the network N as described by policies contained inside a network configuration NC4. All of this is made real when we configure and start the ordering service node O4.
+## Lets design the network:
 
-- Think of smart contracts as governing transactions, whereas chaincode governs how smart contracts are packaged for deployment.
+### Step 1:  
+- Network as `N` . `R4 organisation` creates the network for that it creates a `network config` which is called `NC4`. `Orderer(O4)` will use NC4 to instatiate the network for that componets are required. 
+- but for a component to exist in the network it has to be authorised  and this is what `certificate authorities(CA4)` does. So diff orgaisations have diff CAs / all the organisation can have the same CA.   
+
+### Step 2: 
+- R4 can share the rights to the network (Admin) with R1. Both handles network configrations in which  R4 is not interested (താല്പര്യം) to do any transaction/communication on the network.
+- `Consortium (X1)` is a collection of multiple organisation attaining(നേടുന്നു) the same goals. X1 is the collection of R1 & R2.  
+- The big Network N have smaller networks(Subnets) and this is called `Channel(C1)`. 
+- The NC dont have any say on channel configs. so `channel configs (CC1)` are used and this is managed by R1 & R2.
+
+### Step 3:
+- A Channel will have multiple `Nodes(P1)` and each Nodes may have diff `Ledger(L)` for each channel.
+- The user will interact though an `Application(A)` with the blockchain network.A1 is the outside component and A1 requests are accepted by the `chaincode which is a smart contract`. chaincode acts out those requests in the blockchain network and return the result to the A1 app.   
+- So chaincode(S5) is a code written inside the nodes.  
+- `Muliple nodes can be used in the a channel(C1) with the same ledger and same chaincodes`. 
+-  R3 & R4 dont interacts with C1 channel. 
+- `Think of smart contracts as governing transactions, whereas chaincode governs how smart contracts are packaged for deployment`.
 
 
 ## Prerequisites:
