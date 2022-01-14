@@ -32,10 +32,10 @@ one of this is hyperledger fabric
 
 - `If u are wroking with hyperlegder fabic, you have to work with the channel. Each channel will have peers and each peer will have chaincode.`
 
-CCP files = Common Connection Profile(CCP):
-Anchor peers:
-endorsor peers:
-order peers:
+- CCP files = Common Connection Profile(CCP):
+- Anchor peers:
+- endorsor peers:
+- order peers:
 
 ## Understanding Key Concepts:
 
