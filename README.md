@@ -65,9 +65,9 @@ order peers:
 
 - cURL:
   `> sudo apt-get install curl`
-- Install docker
+- Install docker:
   `> sudo apt-get -y install docker-compose`
-- Make sure the Docker daemon is running.
+- Make sure the Docker daemon is running:
   `> sudo systemctl start docker`
 - Install go
 - Install JQ (only required if you will be writing Go chaincode or SDK applications).
@@ -78,24 +78,27 @@ order peers:
 
 ## Fabric 1.0:
 
-[fabric-samples/firstt-network/]
+FILE LOCATION: [fabric-samples/firstt-network/]
 
-`> ./byfn.sh`
-`> ./byfn.sh generate`
-`> ./byfn.sh up`
-`> ./byfn.sh down`  
-`> ./byfn.sh up -l java`
-`> docker rm -f $(docker ps -aq)`
-`> docker rmi -f $(docker images | grep fabcar | awk '{print $3}')`
-
+```
+  > ./byfn.sh
+  > ./byfn.sh generate
+  > ./byfn.sh up
+  > ./byfn.sh down  
+  > ./byfn.sh up -l java
+  > docker rm -f $(docker ps -aq)
+  > docker rmi -f $(docker images | grep fabcar | awk '{print $3}')
+```
 ## Fabric 2.0 :
 
 **Using the Fabric test network:**
 
-`> ./network.sh down`
-`> ./network.sh up`
-`> docker ps -a`
-`> ./network.sh createChannel -c [channel-name]`
+```
+  > ./network.sh down
+  > ./network.sh up
+  > docker ps -a
+  > ./network.sh createChannel -c [channel-name]
+```
 
 ## Basic Network 2.0:
 
