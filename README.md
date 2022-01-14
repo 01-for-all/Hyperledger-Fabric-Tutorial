@@ -111,7 +111,7 @@ FILE LOCATION: `[fabric-samples/firstt-network/]`
 - State Database: Couch DB
   - **Why use Couch DB over level DB ?** It enables to run complex queries.
 
-### Folder Structure:
+## Folder Structure:
 
 - It is created by taking ref from first network and test network of their official documentation.
 - app folder: this is used when we write our API's
@@ -147,7 +147,7 @@ FILE LOCATION: `[fabric-samples/firstt-network/]`
   - config.js and config.json is used to write APIs.
   - depoloyChaincode.sh
 
-### crypto-config.yaml : Create Idetities
+## crypto-config.yaml : Create Idetities
 
-### configtx.yaml : create channel artifacts
+## configtx.yaml : create channel artifacts
 
