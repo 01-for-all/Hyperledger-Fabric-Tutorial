@@ -19,6 +19,7 @@ one of this is hyperledger fabric
 ## About Private Network: 
 
 ![pvt blockchain channel](Screenshot-pvtblock-1.png)
+
 - Private Blockchain Networks are `private and permissioned`. create a subnet for business to keep their transactions private.
 - The HyperLedger is a project open source project by Liux foudation. The HyperLedger fabric is one of that project.   
 - Fabric is a pvt blockchain network and it have the subnets features and we call them as `channels`.
@@ -51,67 +52,67 @@ order peers:
 - Smart Contract - S
 
 ![network diagram](networkdiagram1.png)
+
 - The network N, accessed by a set of users defined by a Certificate Authority CA4, who have a set of rights over the resources in the network N as described by policies contained inside a network configuration NC4. All of this is made real when we configure and start the ordering service node O4.
 
 - Think of smart contracts as governing transactions, whereas chaincode governs how smart contracts are packaged for deployment.
 
 
-### Prerequisites:
+## Prerequisites:
 
-> sudo apt-get install git
+- Git:
+`> sudo apt-get install git`
 
-- cURL
-  > sudo apt-get install curl
-- install docker
-  > sudo apt-get -y install docker-compose
+- cURL:
+  `> sudo apt-get install curl`
+- Install docker
+  `> sudo apt-get -y install docker-compose`
 - Make sure the Docker daemon is running.
-  > sudo systemctl start docker
-- install go
-- install JQ (only required if you will be writing Go chaincode or SDK applications).
+  `> sudo systemctl start docker`
+- Install go
+- Install JQ (only required if you will be writing Go chaincode or SDK applications).
 
 ### Download the latest release of Fabric samples, docker images, and binaries:
 
-> curl -sSL https://bit.ly/2ysbOFE | bash -s [version-no]
+`> curl -sSL https://bit.ly/2ysbOFE | bash -s [version-no]`
 
 ## Fabric 1.0:
 
 [fabric-samples/firstt-network/]
 
-> ./byfn.sh
-> ./byfn.sh generate
-> ./byfn.sh up
-> ./byfn.sh down  
-> ./byfn.sh up -l java
-> docker rm -f $(docker ps -aq)
-> docker rmi -f $(docker images | grep fabcar | awk '{print $3}')
+`> ./byfn.sh`
+`> ./byfn.sh generate`
+`> ./byfn.sh up`
+`> ./byfn.sh down`  
+`> ./byfn.sh up -l java`
+`> docker rm -f $(docker ps -aq)`
+`> docker rmi -f $(docker images | grep fabcar | awk '{print $3}')`
 
 ## Fabric 2.0 :
 
-Using the Fabric test network:
+**Using the Fabric test network:**
 
-> ./network.sh down
-> ./network.sh up
-> docker ps -a
-> ./network.sh createChannel -c [channel-name]
+`> ./network.sh down`
+`> ./network.sh up`
+`> docker ps -a`
+`> ./network.sh createChannel -c [channel-name]`
 
-### Basic Network 2.0:
+## Basic Network 2.0:
 
-https://github.com/adhavpavan/BasicNetwork-2.0.git
-
-#### Network Details:
+### Network Details:
 
 - Two Organizations
 - Two peers in each Orgaisation
 - One CA for each Organisation
-- 5 Orderer(RAFT)
+- 5 Orderer(`RAFT`)
 - State Database: Couch DB
-  - why use Couch DB over level DB ? It enables to run complex queries.
+  - **Why use Couch DB over level DB ?** It enables to run complex queries.
 
-#### Folder Structure:
+### Folder Structure:
 
 - It is created by taking ref from first network and test network of their official documentation.
 - app folder: this is used when we write our API's
-- Artifacts folder: one of the most imp folder in fabric network.
+- `Artifacts folder`: one of the most imp folder in fabric network.
   - `channel`
     - configtx.yaml
     - crypto-config.yaml
@@ -143,7 +144,7 @@ https://github.com/adhavpavan/BasicNetwork-2.0.git
   - config.js and config.json is used to write APIs.
   - depoloyChaincode.sh
 
-#### crypto-config.yaml : Create Idetities
+### crypto-config.yaml : Create Idetities
 
-#### configtx.yaml : create channel artifacts
+### configtx.yaml : create channel artifacts
 
