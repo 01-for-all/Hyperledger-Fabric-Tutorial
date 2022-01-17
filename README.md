@@ -164,7 +164,7 @@ FILE LOCATION: `[fabric-samples/firstt-network/]`
   - config.js and config.json is used to write APIs.
   - depoloyChaincode.sh
 
-## 1. crypto-config.yaml : Create Idetities
+## 1. CryptoConfig: Create Crypto Materials
 
 ## 2. configtx.yaml : create channel artifacts
 
