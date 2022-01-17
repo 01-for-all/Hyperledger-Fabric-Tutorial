@@ -117,7 +117,7 @@ FILE LOCATION: `[fabric-samples/firstt-network/]`
 ```
 
 ## Basic Network 2.0:
- I like to mention @adhavpavan tutorial which helped me a lot.
+ I like to mention `@adhavpavan tutorial`[https://www.youtube.com/playlist?list=PLSBNVhWU6KjW4qo1RlmR7cvvV8XIILub6] which helped me a lot.
  
 ### Network Details:
 
