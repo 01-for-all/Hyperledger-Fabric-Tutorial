@@ -116,7 +116,7 @@ FILE LOCATION: `[fabric-samples/firstt-network/]`
   > ./network.sh createChannel -c [channel-name]
 ```
 
-## Basic Network 2.0:
+## Create Basic Network with Hyperledger Fabric v2.0
  I like to mention `@adhavpavan tutorial`[https://www.youtube.com/playlist?list=PLSBNVhWU6KjW4qo1RlmR7cvvV8XIILub6] which helped me a lot.
  
 ### Network Details:
